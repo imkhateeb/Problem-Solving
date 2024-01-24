@@ -1,4 +1,9 @@
 {
         "editor.fontSize": 16,
-        "editor.wordWrap": "on"
+        "editor.wordWrap": "on",
+        "files.associations": {
+                "*.js": "javascriptreact",
+                "xlocale": "cpp",
+                "xstring": "cpp"
+        }
 }
