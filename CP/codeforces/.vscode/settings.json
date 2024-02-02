@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "xstring": "cpp",
+    "ostream": "cpp",
+    "cmath": "cpp",
+    "algorithm": "cpp",
+    "limits": "cpp",
+    "utility": "cpp"
+  }
+}
