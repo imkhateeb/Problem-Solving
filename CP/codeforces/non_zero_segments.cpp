@@ -46,13 +46,42 @@ void alphaFreq(vector<int> &v, string s)
 
 int main()
 {
-  int T;
-  cin >> T;
-  while (T--)
+  int n;
+  cin >> n;
+  vector<int> v;
+  fVec(v, n);
+
+  int sum = 0;
+  int count = 0;
+
+  int st = 0;
+  for (int i = 0; i < n; i++)
   {
-    int n;
-    cin >> n;
+    sum += v[i];
+    if (sum == 0)
+    {
+      count++;
+      sum = v[i];
+    }
+    else
+    {
+      if ((((sum - v[st]) == 0) || ((sum + v[st]) == 0)))
+      {
+        st++;
+        count++;
+        sum = v[i];
+      }
+    }
   }
 
+  while( st != (n-1) )
+  {
+    
+    count++;
+    sum -= v[st];
+    st++;
+  }
+
+  cout << count << endl;
   return 0;
 }

@@ -1,0 +1,1 @@
+{"name":"Local: non_zero_segments","url":"c:\\Users\\lucky\\Desktop\\DSA\\CP\\codeforces\\non_zero_segments.cpp","tests":[{"id":1707586530797,"input":"8\n16 -5 -11 -15 10 5 4 -4","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\lucky\\Desktop\\DSA\\CP\\codeforces\\non_zero_segments.cpp","group":"local","local":true}
