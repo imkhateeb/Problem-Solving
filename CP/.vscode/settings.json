@@ -1,6 +1,14 @@
 {
   "files.associations": {
     "*.js": "javascriptreact",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "vector": "cpp",
+    "algorithm": "cpp",
+    "limits": "cpp",
+    "utility": "cpp",
+    "queue": "cpp",
+    "deque": "cpp",
+    "xstring": "cpp",
+    "xutility": "cpp"
   }
 }

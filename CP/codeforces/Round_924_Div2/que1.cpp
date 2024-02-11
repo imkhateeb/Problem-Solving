@@ -46,65 +46,32 @@ void alphaFreq(vector<int> &v, string s)
 
 int main()
 {
-  int n;
-  cin >> n;
-  vector<int> v;
-  fVec(v, n);
-
-  map<long long, int> m;
-  map<long long, bool> vis;
-  vector<int> p(n + 1, 0);
-
-  p[0] = 0;
-  m[p[0]]++;
-  for (int i = 1; i <= n; i++)
+  int T;
+  cin >> T;
+  while (T--)
   {
-    p[i] = p[i - 1] + v[i - 1];
-    m[p[i]]++;
-  }
+    int a, b;
+    cin >> a >> b;
 
-  int count = 0;
-  queue<int> q;
-
-  for ( int i = 0; i <= n; i++ ){
-    cout << p[i] << " ";
-  } cout << endl;
-
-  for (int i = 0; i <= n; i++)
-  {
-    if (vis[p[i]])
+    if (a % 2 != 0 && b % 2 != 0)
     {
-      if (m[p[i]] > 1)
-      {
-        q.push(p[i]);
-        m[p[i]]--;
-      }
-      else
-      {
-        vis[p[i]] = false;
-      }
-
-      while (q.front() != p[i])
-      {
-        vis[q.front()] = false;
-        q.pop();
-      }
-
-      q.pop();
-      count++;
+      cout << "No" << endl;
     }
     else
     {
-      if (m[p[i]] > 1)
+      int mini = min(a, b);
+      int maxi = max(a, b);
+
+      if (((mini * 2) == maxi) && (mini % 2 != 0))
       {
-        q.push(p[i]);
-        m[p[i]]--;
-        vis[p[i]] = true;
+        cout << "No" << endl;
+      }
+      else
+      {
+        cout << "Yes" << endl;
       }
     }
   }
-
-  cout << count << endl;
 
   return 0;
 }
