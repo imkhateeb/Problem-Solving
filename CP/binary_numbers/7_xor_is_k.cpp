@@ -36,6 +36,14 @@ void pVec(vector<int> &v)
 }
 /*--------------------------------------------------------------------*/
 
+/*
+Array of length n. Find all pairs at indices i, j ( 0 <= i < j < n) has xor k.
+
+Constraints
+0 <= T <= 10 ^ 5
+0 <= n <= 10 ^ 5
+0 <= A[i] <= 10 ^ 9
+*/
 
 int main()
 {
@@ -43,8 +51,21 @@ int main()
   cin >> T;
   while (T--)
   {
-    int n;
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
+
+    vector<int> v;
+    fVec(v, n);
+
+    map<int, int> m;
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+      count += m[v[i] ^ k];
+      m[v[i]]++;
+    }
+
+    cout << count << endl;
   }
 
   return 0;

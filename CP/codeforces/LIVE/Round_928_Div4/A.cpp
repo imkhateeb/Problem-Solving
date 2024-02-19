@@ -35,17 +35,22 @@ void pVec(vector<int> &v)
   cout << endl;
 }
 /*--------------------------------------------------------------------*/
+char mostFrequentChar(const string& s) {
+    int countA = 0, countB = 0;
+    for (char c : s) {
+        if (c == 'A') countA++;
+        else countB++;
+    }
+    return (countA > countB) ? 'A' : 'B';
+}
 
-
-int main()
-{
-  int T;
-  cin >> T;
-  while (T--)
-  {
-    int n;
-    cin >> n;
-  }
-
-  return 0;
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        string s;
+        cin >> s;
+        cout << mostFrequentChar(s) << endl;
+    }
+    return 0;
 }

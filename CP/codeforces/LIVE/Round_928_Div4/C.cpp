@@ -36,15 +36,34 @@ void pVec(vector<int> &v)
 }
 /*--------------------------------------------------------------------*/
 
+int sumOfDigits(int num)
+{
+  int sum = 0;
+  while (num != 0)
+  {
+    sum += num % 10;
+    num /= 10;
+  }
+  return sum;
+}
 
 int main()
 {
   int T;
   cin >> T;
+
+  long long pf[200001] = {0};
+
+  for (int i = 1; i < 200001; i++)
+  {
+    pf[i] = pf[i-1] + sumOfDigits(i);
+  }
+
   while (T--)
   {
     int n;
     cin >> n;
+    cout << pf[n] << endl;
   }
 
   return 0;

@@ -36,7 +36,6 @@ void pVec(vector<int> &v)
 }
 /*--------------------------------------------------------------------*/
 
-
 int main()
 {
   int T;
@@ -45,6 +44,48 @@ int main()
   {
     int n;
     cin >> n;
+
+    string s;
+    cin >> s;
+
+    string str = "";
+    for (int i = 0; i < n; i++)
+    {
+      if (s[i] == 'a' || s[i] == 'e')
+      {
+        str.push_back('V');
+      }
+      else
+      {
+        str.push_back('C');
+      }
+    }
+
+    string ans = "";
+    string temp = "";
+
+    for (int i = 0; i < n; i++)
+    {
+
+      ans.push_back(s[i]);
+      if ( i == n-1 ) break;
+
+      if ( str[i] == 'V' ){
+        if ( i <= n-3 ){
+          if ( str[i+1] == 'C' && str[i+2] == 'V' ){
+            ans.push_back('.');
+          }
+        }
+      } else {
+        if ( i <= n-2 ){
+          if ( str[i+1] == 'C' ){
+            ans.push_back('.');
+          }
+        }
+      }
+    }
+
+    cout << ans << endl;
   }
 
   return 0;

@@ -37,15 +37,19 @@ void pVec(vector<int> &v)
 /*--------------------------------------------------------------------*/
 
 
-int main()
-{
-  int T;
-  cin >> T;
-  while (T--)
-  {
-    int n;
-    cin >> n;
-  }
-
-  return 0;
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        unordered_map<int, int> freq;
+        int a, b, c;
+        cin >> a >> b >> c;
+        freq[a]++;
+        freq[b]++;
+        freq[c]++;
+        if (freq[a] == 1) cout << a << endl;
+        else if (freq[b] == 1) cout << b << endl;
+        else cout << c << endl;
+    }
+    return 0;
 }

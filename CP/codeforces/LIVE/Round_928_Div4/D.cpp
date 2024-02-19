@@ -13,6 +13,8 @@
 #define vs vector<string>
 #define vpii vector<pair<int, int>>
 
+const int N = 2147483647;
+
 using namespace std;
 
 void fVec(vector<int> &v, int n)
@@ -36,7 +38,6 @@ void pVec(vector<int> &v)
 }
 /*--------------------------------------------------------------------*/
 
-
 int main()
 {
   int T;
@@ -45,7 +46,27 @@ int main()
   {
     int n;
     cin >> n;
-  }
 
+    vi v;
+    fVec(v, n);
+
+    int cnt = 0;
+    map<int, int> m;
+
+    for (int i = 0; i < n; i++)
+    {
+      if (m[v[i]] == 0)
+      {
+        m[v[i] ^ N]++;
+      }
+      else
+      {
+        m[v[i]]--;
+        cnt++;
+      }
+    }
+
+    cout << n - cnt << endl;
+  }
   return 0;
 }

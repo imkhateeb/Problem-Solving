@@ -37,15 +37,10 @@ void pVec(vector<int> &v)
 /*--------------------------------------------------------------------*/
 
 
-int main()
-{
-  int T;
-  cin >> T;
-  while (T--)
-  {
-    int n;
-    cin >> n;
-  }
-
-  return 0;
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+    }
+    return 0;
 }

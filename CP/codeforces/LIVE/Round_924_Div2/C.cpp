@@ -34,8 +34,15 @@ void pVec(vector<int> &v)
   }
   cout << endl;
 }
-/*--------------------------------------------------------------------*/
 
+void alphaFreq(vector<int> &v, string s)
+{
+  int n = s.size();
+  for (int i = 0; i < n; i++)
+  {
+    v[s[i] - 'a']++;
+  }
+}
 
 int main()
 {
@@ -43,8 +50,8 @@ int main()
   cin >> T;
   while (T--)
   {
-    int n;
-    cin >> n;
+    int n, x;
+    cin >> n >> x;
   }
 
   return 0;

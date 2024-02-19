@@ -34,8 +34,7 @@ void pVec(vector<int> &v)
   }
   cout << endl;
 }
-/*--------------------------------------------------------------------*/
-
+/*---------------------------------------------------------------*/
 
 int main()
 {
@@ -45,6 +44,26 @@ int main()
   {
     int n;
     cin >> n;
+
+    vector<int> a;
+    fVec(a, n);
+
+    long long sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+      sum += a[i];
+    }
+
+    long long int square = sqrt(sum);
+    double same = sqrt(sum);
+    if (square == same)
+    {
+      cout << "YES\n";
+    }
+    else
+    {
+      cout << "NO\n";
+    }
   }
 
   return 0;

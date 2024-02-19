@@ -4,6 +4,11 @@
     "ostream": "cpp",
     "xhash": "cpp",
     "vector": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "utility": "cpp",
+    "cmath": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "xstring": "cpp"
   }
 }
