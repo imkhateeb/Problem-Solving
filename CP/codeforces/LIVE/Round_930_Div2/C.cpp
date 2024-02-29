@@ -69,14 +69,42 @@ int main()
   {
     /*------------------------ VARIABLES -----------------------*/
     let n, flag = false, cnt = 0, temp, a, b, x, y, z, p, q, r;
-    string str = "", tempStr = "", s;
+    string str = "", tempStr = "", s1, s2;
     vi v;
 
     /*------------------------- INPUTS -------------------------*/
     cin >> n;
-    fillVec(v, n);
 
     /*--------------------- START --- CODE ---------------------*/
+
+    let max_xor = 0, max_i = -1, max_j = -1;
+
+    for (let k = 0; k < 3 * n; k++)
+    {
+      let a = rand() % n;
+      let b = rand() % n;
+      let c = rand() % n;
+      let d = rand() % n;
+
+      cout << "? " << a << " " << b << " " << c << " " << d << endl;
+      fflush(stdout);
+
+      char response;
+      cin >> response;
+
+      if (response == '>')
+      {
+        if (max_xor < (v[a] ^ v[b]))
+        {
+          max_xor = v[a] ^ v[b];
+          max_i = a;
+          max_j = b;
+        }
+      }
+    }
+
+    cout << "! " << max_i << " " << max_j << endl;
+    fflush(stdout);
 
     /*---------------------- END --- CODE ----------------------*/
   }

@@ -70,10 +70,70 @@ int main()
   while (T--)
   {
     cin >> n;
-    // vi v;
-    // fillVec(v, n);
+    vi v;
+    fillVec(v, n);
     /*---------- START --- CODE ----------*/
+    cnt = 0;
+    int a = 0;
+    int maxi = INT_MAX;
+    int mini = INT_MAX;
 
+    for (int i = 0; i < n; i++)
+    {
+      if (v[i] < mini)
+      {
+        mini = v[i];
+      }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+      if (v[i] == mini)
+      {
+        a++;
+      }
+    }
+
+    if (a == 1)
+    {
+
+      for (int i = 0; i < n; i++)
+      {
+
+        if (v[i] < maxi && v[i] != mini)
+        {
+          maxi = v[i];
+        }
+      }
+    }
+    else
+    {
+      maxi = mini;
+    }
+
+    int mC = 0;
+    int nC = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+
+      if (v[i] == maxi && mC == 0)
+      {
+        mC++;
+        cnt += v[i];
+      }
+      else if (v[i] == mini && nC == 0)
+      {
+        nC++;
+        cnt += v[i];
+      }
+      else
+      {
+        cnt += (v[i] * 2);
+      }
+    }
+
+    cout << cnt << endl;
 
     /*---------- END --- CODE ----------*/
     // printVec(v);

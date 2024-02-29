@@ -63,17 +63,68 @@ let powerWithMod(let x, let y, let p)
 
 int main()
 {
-  let T, n, flag = false, cnt = 0, temp, a, b, x, y, z, p, q, r;
+  let T;
   string str = "", tempStr = "", s;
 
   cin >> T;
   while (T--)
   {
-    cin >> n;
-    // vi v;
-    // fillVec(v, n);
+    let n, flag = false, cnt = 0, temp, a, b, x, y, z, p, q, r;
+    cin >> n >> q;
+    vi v;
+    fillVec(v, n);
     /*---------- START --- CODE ----------*/
 
+    map<let, bool> m1;
+    map<let, pair<int, int>> m2;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+      for (int j = i + 1; j < n; j++)
+      {
+        cnt = 0;
+        for (int k = 0; k < n; k++)
+        {
+
+          if (k == i || k == j)
+          {
+            cnt += v[k];
+          }
+          else
+          {
+            cnt += (2 * v[k]);
+          }
+        }
+
+        m1[cnt] = true;
+        m2[cnt] = {i, j};
+      }
+    }
+
+    while (q--)
+    {
+      cin >> x;
+
+      if (m1[x])
+      {
+        int i = m2[x].first;
+        int j = m2[x].second;
+
+        cout << v[i] << " ";
+        for (int k = 0; k < n; k++)
+        {
+          if (k != i && k != j)
+          {
+            cout << v[k] << " ";
+          }
+        }
+        cout << v[j] << endl;
+      }
+      else
+      {
+        cout << -1 << endl;
+      }
+    }
 
     /*---------- END --- CODE ----------*/
     // printVec(v);

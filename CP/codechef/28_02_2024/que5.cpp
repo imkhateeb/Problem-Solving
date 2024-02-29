@@ -74,6 +74,10 @@ int main()
     // fillVec(v, n);
     /*---------- START --- CODE ----------*/
 
+    let x = (n * (n + 1)) / 2;
+
+    cout << (x + n - 1) << endl;
+
 
     /*---------- END --- CODE ----------*/
     // printVec(v);

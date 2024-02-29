@@ -59,24 +59,32 @@ let powerWithMod(let x, let y, let p)
   }
   return res;
 }
-/*-------------------------- MAIN --- CODE ---------------------------*/
+/*----------------------- MAIN --- CODE ------------------------*/
 
 int main()
 {
-  let T, n, flag = false, cnt = 0, temp, a, b, x, y, z, p, q, r;
-  string str = "", tempStr = "", s;
-
+  let T;
   cin >> T;
   while (T--)
   {
+    /*------------------------ VARIABLES -----------------------*/
+    let n, flag = false, cnt = 0, temp, a, b, x, y, z, p, q, r;
+    string str = "", tempStr = "", s;
+    vi v;
+
+    /*------------------------- INPUTS -------------------------*/
     cin >> n;
-    // vi v;
-    // fillVec(v, n);
-    /*---------- START --- CODE ----------*/
 
+    /*--------------------- START --- CODE ---------------------*/
 
-    /*---------- END --- CODE ----------*/
-    // printVec(v);
+    cnt = 1;
+    while ( (cnt * 2) <= n ){
+      cnt = cnt * 2;
+    }
+
+    cout << cnt << endl;
+
+    /*---------------------- END --- CODE ----------------------*/
   }
 
   return 0;

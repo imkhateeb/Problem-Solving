@@ -75,6 +75,19 @@ int main()
     /*---------- START --- CODE ----------*/
 
 
+    if ( n%2 == 0 ){
+
+      let x = n/2;
+      cout << x * 1LL * (x + 1) << endl;
+
+    } else {
+
+      let x = ((n+1)/2);
+      cout << ((x * 1LL * (x+1)) - x) << endl;
+
+    }
+
+
     /*---------- END --- CODE ----------*/
     // printVec(v);
   }

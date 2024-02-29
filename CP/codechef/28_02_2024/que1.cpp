@@ -69,10 +69,22 @@ int main()
   cin >> T;
   while (T--)
   {
+    cnt = 0;
     cin >> n;
-    // vi v;
-    // fillVec(v, n);
+    vi v;
+    fillVec(v, n);
     /*---------- START --- CODE ----------*/
+
+
+    for ( int i = 0; i < n; i++ ){
+      if ( v[i]%2 == 0 ){
+        cnt += (v[i]/2);
+      } else {
+        cnt += ((v[i]/2) + 1);
+      }
+    }
+
+    cout << cnt << endl;
 
 
     /*---------- END --- CODE ----------*/

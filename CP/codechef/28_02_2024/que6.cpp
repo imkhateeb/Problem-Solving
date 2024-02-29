@@ -69,11 +69,37 @@ int main()
   cin >> T;
   while (T--)
   {
-    cin >> n;
+    cin >> n >> a >> b;
     // vi v;
     // fillVec(v, n);
     /*---------- START --- CODE ----------*/
-
+    if (a == b)
+    {
+      if (n % (a + 1) == 0)
+      {
+        cout << "BOB" << endl;
+      }
+      else
+      {
+        cout << "ALICE" << endl;
+      }
+    }
+    else if (a >= n)
+    {
+      cout << "ALICE" << endl;
+    }
+    else if (b >= n)
+    {
+      cout << "BOB" << endl;
+    }
+    else if (b > a)
+    {
+      cout << "BOB" << endl;
+    }
+    else
+    {
+      cout << "ALICE" << endl;
+    }
 
     /*---------- END --- CODE ----------*/
     // printVec(v);
