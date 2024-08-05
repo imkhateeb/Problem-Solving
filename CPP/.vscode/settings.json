@@ -1,5 +1,5 @@
 {
-        "editor.fontSize": 16,
+        "editor.fontSize": 12,
         "editor.wordWrap": "on",
         "files.associations": {
                 "*.js": "javascriptreact",
