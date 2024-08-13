@@ -44,6 +44,21 @@ let power(let x, let y)
   return res;
 }
 
+let powerWithMod(let x, let y, let p)
+{
+  let res = 1;
+  x = x % p;
+  if (x == 0)
+    return 0;
+  while (y > 0)
+  {
+    if (y & 1)
+      res = (res * x) % p;
+    y = y >> 1;
+    x = (x * x) % p;
+  }
+  return res;
+}
 /*----------------------- MAIN --- CODE ------------------------*/
 
 int main()
@@ -53,12 +68,34 @@ int main()
   while (T--)
   {
     /*------------------------ VARIABLES -----------------------*/
-    let n;
+    int a, b, c;
+
     /*------------------------- INPUTS -------------------------*/
-    cin >> n;
-    fillVec(v, n);
+    cin >> a;
+    cin >> b;
+    cin >> c;
 
     /*--------------------- START --- CODE ---------------------*/
+    let ans = 0;
+
+    if (c <= a && c <= b)
+    {
+      ans = c * c;
+    }
+    else if (c > a && c <= b)
+    {
+      ans = a * c;
+    }
+    else if (c <= a && c > b)
+    {
+      ans = c * b;
+    }
+    else
+    {
+      ans = a * b;
+    }
+
+    cout << ans << endl;
 
     /*---------------------- END --- CODE ----------------------*/
   }

@@ -56,9 +56,73 @@ int main()
     let n;
     /*------------------------- INPUTS -------------------------*/
     cin >> n;
+    vi v;
     fillVec(v, n);
+    string s;
+    cin >> s;
 
     /*--------------------- START --- CODE ---------------------*/
+    vector<pair<int, int>> vp;
+
+    vector<let> prefix_sum(n, 0);
+    prefix_sum[0] = v[0];
+    for (let i = 1; i < n; i++)
+    {
+      prefix_sum[i] = prefix_sum[i - 1] + v[i];
+    }
+
+    let ans = 0;
+
+    int i = 0;
+    int j = n - 1;
+
+    while (i < j)
+    {
+      while (i < j)
+      {
+        if (s[i] == 'L')
+        {
+          break;
+        }
+        i++;
+      }
+
+      while (i < j)
+      {
+        if (s[j] == 'R')
+        {
+          break;
+        }
+        j--;
+      }
+
+      if (i >= j)
+      {
+        break;
+      }
+      else
+      {
+        vp.push_back({i, j});
+        i++;
+        j--;
+      }
+    }
+
+    for (int i = vp.size() - 1; i >= 0; i--)
+    {
+      int l = vp[i].first;
+      int r = vp[i].second;
+      if (l == 0)
+      {
+        ans += prefix_sum[r];
+      }
+      else
+      {
+        ans += prefix_sum[r] - prefix_sum[l - 1];
+      }
+    }
+
+    cout << ans << endl;
 
     /*---------------------- END --- CODE ----------------------*/
   }

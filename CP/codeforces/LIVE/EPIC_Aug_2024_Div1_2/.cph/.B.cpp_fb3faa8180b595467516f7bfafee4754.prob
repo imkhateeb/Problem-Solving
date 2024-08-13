@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"c:\\Users\\lucky\\Desktop\\DSA\\CP\\codeforces\\LIVE\\EPIC_Aug_2024_Div1_2\\B.cpp","tests":[{"id":1723389339439,"input":"1\n4\n1 2 3 4\n3 1 2 4","output":"Bob\nAlice\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\lucky\\Desktop\\DSA\\CP\\codeforces\\LIVE\\EPIC_Aug_2024_Div1_2\\B.cpp","group":"local","local":true}

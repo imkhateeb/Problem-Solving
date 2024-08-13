@@ -56,9 +56,36 @@ int main()
     let n;
     /*------------------------- INPUTS -------------------------*/
     cin >> n;
+    vi v;
     fillVec(v, n);
 
     /*--------------------- START --- CODE ---------------------*/
+
+    unordered_map<let, bool> m;
+    bool flag = true;
+    m[v[0]] = 1;
+
+    for (let i = 1; i < n; i++)
+    {
+      if (!m[v[i] - 1] && !m[v[i] + 1])
+      {
+        flag = false;
+        break;
+      }
+      else
+      {
+        m[v[i]] = true;
+      }
+    }
+
+    if (flag)
+    {
+      cout << "YES" << endl;
+    }
+    else
+    {
+      cout << "NO" << endl;
+    }
 
     /*---------------------- END --- CODE ----------------------*/
   }

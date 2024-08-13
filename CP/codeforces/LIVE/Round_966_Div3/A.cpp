@@ -56,10 +56,57 @@ int main()
     let n;
     /*------------------------- INPUTS -------------------------*/
     cin >> n;
-    fillVec(v, n);
 
     /*--------------------- START --- CODE ---------------------*/
 
+    string str = "";
+
+    while (n)
+    {
+      char ch = (char)('0' + (n % 10));
+      str.push_back(ch);
+
+      n /= 10;
+    }
+
+    reverse(str.begin(), str.end());
+
+    if (str.size() <= 2)
+    {
+      cout << "NO" << endl;
+    }
+    else
+    {
+      if (str[0] == '1' && str[1] == '0')
+      {
+        if (str.size() == 3)
+        {
+          if ((str[2] - '0') >= 2)
+          {
+            cout << "YES" << endl;
+          }
+          else
+          {
+            cout << "NO" << endl;
+          }
+        }
+        else
+        {
+          if (str[2] == '0')
+          {
+            cout << "NO" << endl;
+          }
+          else
+          {
+            cout << "YES" << endl;
+          }
+        }
+      }
+      else
+      {
+        cout << "NO" << endl;
+      }
+    }
     /*---------------------- END --- CODE ----------------------*/
   }
 

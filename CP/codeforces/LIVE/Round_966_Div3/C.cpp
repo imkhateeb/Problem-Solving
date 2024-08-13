@@ -56,9 +56,70 @@ int main()
     let n;
     /*------------------------- INPUTS -------------------------*/
     cin >> n;
+    vi v;
     fillVec(v, n);
 
+    let m;
+    cin >> m;
+
     /*--------------------- START --- CODE ---------------------*/
+
+    while (m--)
+    {
+      string s;
+      cin >> s;
+
+      if (s.size() != n)
+      {
+        cout << "NO" << endl;
+        continue;
+      }
+
+      unordered_map<char, int> m1;
+      unordered_map<int, char> m2;
+      bool flag = true;
+
+      for (let i = 0; i < n; i++)
+      {
+        if (m1[s[i]])
+        {
+          if (m1[s[i]] != v[i])
+          {
+            flag = false;
+            break;
+          }
+          else if (!m2[v[i]])
+          {
+            flag = false;
+            break;
+          }
+          else if (m2[v[i]] != s[i])
+          {
+            flag = false;
+            break;
+          }
+        }
+        else if (m2[v[i]])
+        {
+          flag = false;
+          break;
+        }
+        else
+        {
+          m1[s[i]] = v[i];
+          m2[v[i]] = s[i];
+        }
+      }
+
+      if (flag)
+      {
+        cout << "YES" << endl;
+      }
+      else
+      {
+        cout << "NO" << endl;
+      }
+    }
 
     /*---------------------- END --- CODE ----------------------*/
   }
