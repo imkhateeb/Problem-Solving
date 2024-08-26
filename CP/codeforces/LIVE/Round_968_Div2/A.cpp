@@ -20,6 +20,20 @@ int main()
   cin >> T;
   while (T--)
   {
+    let n;
+    cin >> n;
+
+    string s;
+    cin >> s;
+
+    if (s[0] == s[s.size() - 1])
+    {
+      cout << "NO" << endl;
+    }
+    else
+    {
+      cout << "YES" << endl;
+    }
   }
 
   return 0;

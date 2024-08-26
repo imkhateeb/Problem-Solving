@@ -20,6 +20,17 @@ int main()
   cin >> T;
   while (T--)
   {
+    let n;
+    cin >> n;
+    vi a(n);
+    for (let i = 0; i < n; i++)
+    {
+      cin >> a[i];
+    }
+
+    sort(all(a));
+
+    cout << a[n / 2] << endl;
   }
 
   return 0;
