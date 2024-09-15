@@ -6,6 +6,11 @@
     "cmath": "cpp",
     "algorithm": "cpp",
     "limits": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "initializer_list": "cpp",
+    "list": "cpp",
+    "vector": "cpp",
+    "xhash": "cpp",
+    "xutility": "cpp"
   }
 }
