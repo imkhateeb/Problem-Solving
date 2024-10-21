@@ -1,0 +1,1 @@
+{"name":"Local: precompute_array","url":"c:\\Users\\lucky\\Desktop\\DSA\\CPP\\MATHS\\precompute_array.cpp","tests":[{"id":1729267145342,"input":"1\n12 4\n1 7 5\n3 6 3\n8 10 -7\n4 9 8","output":"16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\lucky\\Desktop\\DSA\\CPP\\MATHS\\precompute_array.cpp","group":"local","local":true}
