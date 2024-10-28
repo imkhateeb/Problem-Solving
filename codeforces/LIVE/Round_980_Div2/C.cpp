@@ -14,6 +14,8 @@
 #define vpii vector<pair<let, let>>
 using namespace std;
 
+// Check for the case when two minimums are same
+
 int main()
 {
   let T;
@@ -29,7 +31,7 @@ int main()
     {
       let x, y;
       cin >> x >> y;
-      v.pb({(x + y) / 2, {x, y}});
+      v.pb({min(x, y), {x, y}});
     }
 
     sort(all(v));

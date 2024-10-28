@@ -6,6 +6,9 @@
     "xlocale": "cpp",
     "xstring": "cpp",
     "queue": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "deque": "cpp",
+    "vector": "cpp",
+    "xtree": "cpp"
   }
 }
