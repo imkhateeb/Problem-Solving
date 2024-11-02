@@ -20,6 +20,7 @@
     "streambuf": "cpp",
     "tuple": "cpp",
     "unordered_set": "cpp",
-    "xiosbase": "cpp"
+    "xiosbase": "cpp",
+    "cstdlib": "cpp"
   }
 }

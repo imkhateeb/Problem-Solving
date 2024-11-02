@@ -2,6 +2,8 @@
 #define logger_h
 #include <string>
 
+using namespace std;
+
 class Logger
 {
 private:
@@ -11,7 +13,7 @@ private:
 
 public:
   static Logger *getInstance();
-  void Log(std::string msg);
+  void Log(string msg);
 };
 
 #endif
