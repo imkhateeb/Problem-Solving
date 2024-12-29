@@ -21,6 +21,7 @@
     "tuple": "cpp",
     "unordered_set": "cpp",
     "xiosbase": "cpp",
-    "cstdlib": "cpp"
+    "cstdlib": "cpp",
+    "xlocale": "cpp"
   }
 }
