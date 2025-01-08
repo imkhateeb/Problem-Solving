@@ -65,6 +65,10 @@ int main()
       {
         if (m[s[i]] > last)
         {
+          bool isContain = false;
+          for(let i = 'a' i <= s[i]; i++){
+            
+          }
           if (m[s[i]] < s[i])
           {
             last = m[s[i]];
