@@ -22,62 +22,64 @@ int main()
   {
     let n;
     cin >> n;
-    vi a(n), b(n);
-
+    vi a(n);
     for (let i = 0; i < n; i++)
+    {
       cin >> a[i];
+    }
 
+    vi b(n);
     for (let i = 0; i < n; i++)
+    {
       cin >> b[i];
+    }
 
-    let maxB = LLONG_MIN;
-    int idx = 0;
-    for (let i = 0; i < n; i++)
+    let need = 0;
+    for (int i = 0; i < n; i++)
     {
-      if (b[i] > a[i] && maxB < b[i])
+      if (b[i] > a[i])
       {
-        maxB = b[i];
-        idx = i;
+        need++;
       }
     }
 
-    vector<let> temp;
-    for (let i = 0; i < n; i++)
+    if (need >= 2)
     {
-      if (i == idx)
-      {
-        continue;
-      }
-      else if (b[i] > a[i])
-      {
-        temp.pb(b[i]);
-      }
+      cout << "NO" << endl;
+      continue;
     }
 
-    let need = maxDiff;
-    sort(all(temp), greater<let>());
-
-    for (let i = 0; i < temp.size(); i++)
-    {
-      need += (let)pow(2, (i + 1)) * temp[i];
-    }
-
-    let minSurplus = LLONG_MAX;
-    for (let i = 0; i < n; i++)
-    {
-      if (b[i] > 0 && a[i] > b[i])
-      {
-        minSurplus = min(minSurplus, a[i] - b[i]);
-      }
-    }
-
-    if (need <= minSurplus)
+    if (need == 0)
     {
       cout << "YES" << endl;
+      continue;
+    }
+
+    let maxNeed = 0;
+    for (int i = 0; i < n; i++)
+    {
+      if (b[i] > a[i])
+      {
+        maxNeed = max(maxNeed, b[i] - a[i]);
+      }
+    }
+
+    let minExtra = INT_MAX;
+    for (int i = 0; i < n; i++)
+    {
+      if (a[i] >= b[i])
+      {
+        minExtra = min(minExtra, a[i] - b[i]);
+      }
+    }
+
+    if (minExtra < maxNeed)
+    {
+      cout << "NO" << endl;
     }
     else
     {
-      cout << "NO" << endl;
+      cout << "YES" << endl;
     }
   }
 

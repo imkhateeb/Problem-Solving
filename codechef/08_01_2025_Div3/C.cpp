@@ -1,75 +1,46 @@
 #include <bits/stdc++.h>
 #define let long long
-#define MOD 1000000007
-#define pb push_back
-#define ppb pop_back
-#define mp make_pair
-#define ff first
-#define ss second
-#define all(x) x.begin(), x.end()
-#define endl "\n"
-#define vi vector<let>
-#define vvi vector<vector<let>>
-#define vs vector<string>
-#define vpii vector<pair<let, let>>
 using namespace std;
-
-let calculateInversions(const string &s)
-{
-  let ones = 0, inversions = 0;
-  for (char c : s)
-  {
-    if (c == '1')
-    {
-      ones++;
-    }
-    else
-    {
-      inversions += ones;
-    }
-  }
-  return inversions;
-}
 
 int main()
 {
-  let T;
-  cin >> T;
-  while (T--)
+
+  let t;
+  cin >> t;
+
+  while (t--)
   {
-    let N, X, K;
-    cin >> N >> X >> K;
-    string S;
-    cin >> S;
 
-    let totalInversions = calculateInversions(S);
+    let n, x, k;
+    cin >> n >> x >> k;
 
-    if (totalInversions == 0)
+    string s;
+    cin >> s;
+
+    let strLen = s.size();
+
+    let inversions = 0;
+    let ones = 0;
+
+    for (int i = 0; i < strLen; i++)
     {
-      cout << 1 << endl;
-      continue;
+      if (s[i] == '1')
+      {
+        ones++;
+      }
+      else
+      {
+        inversions += ones;
+      }
     }
 
-    let ans = 0;
-    if (K == 1)
+    if ((inversions > x) || (inversions % k != 0))
     {
-      cout << ((totalInversions / X) + (totalInversions % X)) << endl;
+      cout << 2 << endl;
     }
     else
     {
-      let factor = ((X / K) * K);
-      let ans = 0;
-      if (totalInversions % K)
-      {
-        ans++;
-      }
-      while (totalInversions > 0)
-      {
-        ans++;
-        totalInversions = totalInversions - factor;
-      }
-
-      cout << ans << endl;
+      cout << 1 << endl;
     }
   }
 
