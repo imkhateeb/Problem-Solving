@@ -1,0 +1,1 @@
+{"name":"Local: D","url":"c:\\Users\\lucky\\Desktop\\Pb-Solving\\codechef\\15_01_2025_Div3\\D.cpp","tests":[{"id":1736956288030,"input":"3\n4\n1 2 -1 -2\n2\n-1 -1\n4\n-2 3 0 2","output":"2\n0\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\lucky\\Desktop\\Pb-Solving\\codechef\\15_01_2025_Div3\\D.cpp","group":"local","local":true}
