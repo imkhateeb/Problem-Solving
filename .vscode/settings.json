@@ -54,6 +54,24 @@
     "chrono": "cpp",
     "format": "cpp",
     "forward_list": "cpp",
-    "xtree": "cpp"
+    "xtree": "cpp",
+    "charconv": "cpp",
+    "fstream": "cpp",
+    "iomanip": "cpp",
+    "locale": "cpp",
+    "map": "cpp",
+    "mutex": "cpp",
+    "optional": "cpp",
+    "ratio": "cpp",
+    "set": "cpp",
+    "sstream": "cpp",
+    "stack": "cpp",
+    "stop_token": "cpp",
+    "string": "cpp",
+    "thread": "cpp",
+    "xlocbuf": "cpp",
+    "xlocmes": "cpp",
+    "xlocmon": "cpp",
+    "xloctime": "cpp"
   }
 }

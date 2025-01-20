@@ -14,90 +14,106 @@
 #define vpii vector<pair<let, let>>
 using namespace std;
 
+int firstGreater(vector<let> &arr, let target)
+{
+  int l = 0, r = arr.size() - 1;
+  while (l < r)
+  {
+    int m = l + (r - l) / 2;
+    if (arr[m] <= target)
+    {
+      l = m + 1;
+    }
+    else
+    {
+      r = m;
+    }
+  }
+  return l;
+}
+
+int lastSmaller(vector<let> &arr, let target)
+{
+  int l = 0, r = arr.size() - 1;
+  while (l < r)
+  {
+    int m = l + (r - l + 1) / 2;
+    if (arr[m] >= target)
+    {
+      r = m - 1;
+    }
+    else
+    {
+      l = m;
+    }
+  }
+  return l;
+}
+
 int main()
 {
   let T;
   cin >> T;
+  let total = 1000000;
   while (T--)
   {
     let n;
     cin >> n;
 
-    vector<let> a(n);
+    let a1;
+    cin >> a1;
 
-    for (let i = 0; i < n; i++)
+    vector<let> a(n - 1);
+    for (let i = 0; i < n - 1; i++)
     {
       cin >> a[i];
     }
 
-    if (n == 2)
+    sort(all(a));
+
+    if (a1 <= a[0] && a1 >= a[n - 2])
     {
-      if (a[0] == a[1])
-      {
-        cout << 1 << endl;
-      }
-      else if (a[0] > a[1])
-      {
-        if ((a[0] + a[1]) % 2 == 0)
-        {
-          cout << (1000000 - (((a[0] + a[1]) / 2) - 1)) << endl;
-        }
-        else
-        {
-          cout << (1000000 - ((a[0] + a[1]) / 2)) << endl;
-        }
-      }
-      else
-      {
-        cout << ((a[0] + a[1]) / 2) << endl;
-      }
+      cout << total << endl;
+    }
+    else if (a1 <= a[0])
+    {
+      let y = firstGreater(a, a1);
+      let ans = (a[y] + a1) / 2;
+      cout << ans << endl;
+    }
+    else if (a1 >= a[n - 2])
+    {
+      let x = lastSmaller(a, a1);
+      let ans = total - ((a1 + a[x] + 1) / 2) + 1;
+      cout << ans << endl;
     }
     else
     {
+      let x, y;
 
-      bool flag = false;
-      vector<int> temp;
-      for (let i = 1; i < n; i++)
+      for (int i = 0; i < n - 1; i++)
       {
-        temp.pb(a[i]);
-        if (a[0] == a[i])
+        if (a[i] >= a1)
         {
-          cout << 1 << endl;
-          flag = true;
+          x = a[i - 1];
           break;
         }
       }
-
-      if (flag)
-      {
-        continue;
-      }
-
-      sort(all(temp));
-
-      int left = 0;
-      int right = n;
 
       for (let i = 0; i < n - 1; i++)
       {
-        if (a[0] > temp[i] && a[0] < temp[i + 1])
+        if (a[i] > a1)
         {
-          left = i;
-          right = i + 1;
+          y = a[i];
           break;
         }
       }
+      int temp = 1;
 
-      if ()
+      temp += (((y + a1) / 2) - ((x + a1 + 1) / 2));
 
-        let ans = 0;
-      ans += (a[0] + a[right]) / 2;
-
-      if ((a[0] + a[left]) % 2 == 0)
-      {
-      }
+      cout << temp << endl;
     }
   }
-
   return 0;
 }
