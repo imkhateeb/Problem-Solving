@@ -50,9 +50,9 @@
 
 この[Anki用フラッシュカードデッキ](https://apps.ankiweb.net/) は、間隔反復を活用して、システム設計のキーコンセプトの学習を支援します。
 
-* [システム設計デッキ](resources/flash_cards/System%20Design.apkg)
-* [システム設計練習課題デッキ](resources/flash_cards/System%20Design%20Exercises.apkg)
-* [オブジェクト指向練習課題デッキ](resources/flash_cards/OO%20Design.apkg)
+* [システム設計デッキ](resources/flash_cards/System Design.apkg)
+* [システム設計練習課題デッキ](resources/flash_cards/System Design Exercises.apkg)
+* [オブジェクト指向練習課題デッキ](resources/flash_cards/OO Design.apkg)
 
 外出先や移動中の勉強に役立つでしょう。
 

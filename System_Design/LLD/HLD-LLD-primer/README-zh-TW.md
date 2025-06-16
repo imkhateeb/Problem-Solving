@@ -50,9 +50,9 @@
 
 底下提供的[學習單字卡](https://apps.ankiweb.net/)以每隔一段時間間隔出現的方式，幫助你學習系統設計的概念。
 
-* [系統設計單字卡](resources/flash_cards/System%20Design.apkg)
-* [系統設計練習單字卡](resources/flash_cards/System%20Design%20Exercises.apkg)
-* [物件導向設計練習單字卡](resources/flash_cards/OO%20Design.apkg)
+* [系統設計單字卡](resources/flash_cards/System Design.apkg)
+* [系統設計練習單字卡](resources/flash_cards/System Design Exercises.apkg)
+* [物件導向設計練習單字卡](resources/flash_cards/OO Design.apkg)
 
 這些是非常棒的學習資源，隨時都可以使用。
 
