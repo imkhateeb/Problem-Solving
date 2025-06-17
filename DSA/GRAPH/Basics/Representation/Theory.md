@@ -13,6 +13,8 @@ Each connection is called an **edge**.
 - **Unweighted Graph**: All edges are equal
 - **Sparse Graph**: Few edges (E ≪ V²)
 - **Dense Graph**: Many edges (E ≈ V²)
+- **Connected Graph**: Exists a path between every pair of vertices.
+- **Disconnected Graph**: There is atlease one vertices where there is no path between them.
 
 ---
 
