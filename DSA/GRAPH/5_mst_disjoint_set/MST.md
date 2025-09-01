@@ -74,13 +74,14 @@ Prim’s algorithm builds the MST **one node at a time**, always picking the **m
 
 Vertices = 5
 Edges =
+```
 0 --1--> 1
 0 --3--> 3
 1 --3--> 2
 1 --4--> 4
 2 --5--> 4
 3 --6--> 4
-
+```
 
 ### 💡 Adjacency List
 
