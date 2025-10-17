@@ -30,6 +30,10 @@ int main()
 
       if(v[0] > v[1]){
         cout << v[0] - v[1] << endl;
+      }else if(v[0] == v[1]){
+        cout << 1 << endl;
+      }else{
+        cout << 1 + 
       }
 
     }
