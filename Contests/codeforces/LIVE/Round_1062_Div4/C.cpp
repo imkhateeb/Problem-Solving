@@ -20,6 +20,30 @@ int main()
   cin >> T;
   while (T--)
   {
+
+    int n; cin >> n;
+    vector<int> v(n);
+    bool odd = false;
+    bool even = false;
+
+    for(int i = 0; i < n; i++) {
+      int x; cin >> x;
+      v[i] = x;
+
+      if(x%2 == 0) {
+        even = true;
+      }else{
+        odd = true;
+      }
+    }
+
+    if(even && odd){
+      sort(v.begin(), v.end());
+    }
+
+    for(auto it : v) cout << it << " ";
+    cout << endl;
+    
   }
 
   return 0;

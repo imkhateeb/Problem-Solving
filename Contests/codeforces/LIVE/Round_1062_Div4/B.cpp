@@ -20,6 +20,32 @@ int main()
   cin >> T;
   while (T--)
   {
+    int n; cin >> n;
+    string s, t; cin >> s >> t;
+
+    vector<int> f(26, 0);
+    for(auto ch : s){
+      f[ch - 'a']++;
+    }
+
+    for(auto ch : t){
+      f[ch - 'a']--;
+    }
+
+    bool flag = true;
+    for(auto it : f){
+      if(it != 0) {
+        flag = false;
+        break;
+      }
+    }
+
+
+    if(flag){
+      cout << "YES" << endl;
+    }else{
+      cout << "NO" << endl;
+    }
   }
 
   return 0;
