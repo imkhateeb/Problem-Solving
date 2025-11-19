@@ -1,0 +1,1 @@
+{"name":"Local: f_lcs","url":"c:\\Users\\lucky\\Desktop\\Pb-Solving\\DSA\\DP\\atcoder_educational_dp_contest\\f_lcs.cpp","tests":[{"id":1763121796300,"input":"axyb\nabyxb\n","output":"axb\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\lucky\\Desktop\\Pb-Solving\\DSA\\DP\\atcoder_educational_dp_contest\\f_lcs.cpp","group":"local","local":true}
