@@ -20,6 +20,28 @@ int main()
   cin >> T;
   while (T--)
   {
+    int n; cin >> n;
+    int o = 0;
+    int t = 0;
+    int th = 0;
+    for(int i = 0; i < n; i++){
+        int x; cin >> x;
+        if(x == 1) o++;
+        else if(x == 2) t++;
+        else th++;
+    }
+
+    int deleted = 0;
+    if(o > th){
+        deleted += th;
+    }else{
+        deleted += o;
+    }
+    if(t > 0){
+        deleted += (t - 1);
+    }
+
+    cout << deleted << endl;
   }
 
   return 0;

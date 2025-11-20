@@ -20,6 +20,60 @@ int main()
   cin >> T;
   while (T--)
   {
+    let n, k; cin >> n >> k;
+    string s; cin >> s;
+
+    char fni = '$';
+    char lni = '$';
+    int idx = -1;
+
+    for(int i = 0; i < n; i++){
+      char ch = s[i];
+      if(ch != 'I'){
+        if(fni == '$'){
+          idx = i;
+          fni = ch;
+        }else{
+          lni = ch;
+        }
+      }
+    }
+
+    let total = 0;
+
+    if(idx == -1){
+      cout << (((n-1) * 1LL * k) + (k-1)) << endl;
+      continue;
+    }
+
+    char last = s[idx];
+    int cnt = 1;
+    int j = idx;
+    for(int i = idx+1; i < n; i++){
+      if(s[i] == 'I'){
+        j++;
+        continue;
+      }
+      if(s[i] == last){
+        cnt++;
+      }else{
+        total += (cnt + j - 1);
+        cnt = 1;
+        j = 0;
+        last = s[i];
+      }
+    }
+    total += (cnt + j - 1);
+
+    // cout << "TOTAL: " << total << endl;
+
+    total = total * 1LL * k;
+
+    if(fni == '$' || lni == '$' || lni == fni){
+      total += (k - 1);
+    }
+
+    cout << total << endl;
   }
 
   return 0;

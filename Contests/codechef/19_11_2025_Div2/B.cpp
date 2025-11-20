@@ -20,6 +20,24 @@ int main()
   cin >> T;
   while (T--)
   {
+    int n, x; cin >> n >> x;
+    bool found = false;
+    int mini = INT_MAX;
+    int maxi = INT_MIN;
+    for(int i = 0; i < n; i++){
+      int p; cin >> p;
+      mini = min(mini, p);
+      maxi = max(maxi, p);
+      if(x == p){
+        found = true;
+      }
+    }
+
+    if(x <= mini || x >= maxi || found){
+      cout << "Yes" << endl; 
+    }else {
+      cout << "No" << endl;
+    }
   }
 
   return 0;
